@@ -1,0 +1,50 @@
+section.portfolio {
+    padding: 20px;
+  .projects {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transition: 0.8s opacity;    
+    &:hover {        
+        .project {
+            img {
+                opacity: 0.3;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .project {
+        width: 33.33333%;
+        padding: 10px;
+        img {
+            width: 100%;
+            object-fit: cover;
+            padding-bottom: 20px;
+            max-height: 500px;
+            height: 400px;   
+            transition: 0.8s opacity;                           
+            &.x2 {
+                max-height: 800px;
+                height: 800px;
+            }  
+        }     
+         
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+    section.portfolio {
+        .projects {
+            .project {
+                width: 100%;
+            }
+        }
+    }
+}
+

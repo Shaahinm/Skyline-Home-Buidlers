@@ -6,23 +6,7 @@ section.about-us {
   }
   @media screen and (min-width: 1200px) {
     margin-top: 200px;
-  }
-  header {
-    font-size: 3em;
-    text-align: center;
-    text-transform: uppercase;
-    color: $accent-color;
-  }
-  p {
-    line-height: 1.5em;
-    width: 100%;
-    margin: 20px auto;
-    text-align: justify;
-    @media screen and (min-width: 900px) {
-      width: 50%;
-      text-align: center;
-    }
-  }
+  } 
   .grid {
     * {
       margin: 10px 0;
