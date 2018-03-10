@@ -1,0 +1,42 @@
+section.service { 
+    padding: 20px;
+    @media screen and (min-width: 900px) {
+        margin-top: 100px;    
+    }
+    
+    .services {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 280px;
+        .service-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;      
+            min-height: 200px;    
+            box-shadow: 0 0px 8px 1px $accent-color-shadow;
+            border-radius: 8px;
+            margin: 5px;            
+            @media screen and (max-width: 600px){
+                flex-basis: 100%;
+                margin: 5px 0;
+            }  
+            i {
+                font-size: 3em;
+                color: $accent-color;
+                transition: color 0.3s;
+            }
+            .title {
+                padding-top: 20px;
+            }
+            &:hover {
+                i {
+                    color: $main-color;
+                }
+            }
+        }
+    }   
+}

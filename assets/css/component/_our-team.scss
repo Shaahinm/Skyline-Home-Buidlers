@@ -1,0 +1,76 @@
+section.our-team {
+  padding: 20px;
+  @media screen and (min-width: 900px) {
+    margin-top: 100px;
+  }
+  .personnel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 280px;
+    margin-top: 50px;
+    .person {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      min-height: 200px;
+      box-shadow: 0 0px 8px 1px $accent-color-shadow;
+      border-radius: 8px;
+      margin: 5px;
+      position: relative;      
+      @media screen and (max-width: 900px) {
+        flex-basis: 100%;
+        margin: 5px 0;
+      }
+      img {
+        height: 400px;
+        width: 100%;
+        border-radius: 4px;
+        object-fit: contain;
+        @media screen and (max-width: 900px) {
+          height: 500px;
+        }
+      }
+      .contact-info {
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        .name {
+          font-size: 2em;
+          padding: 20px;
+          font-weight: 700;
+        }
+        .title {
+          padding: 20px;
+        }
+        .contact {
+          flex: 1;
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 20px;
+          text-align: center;
+          align-items: center;
+          a {
+            text-decoration: none;
+            color: $white;
+            width: 200px;
+            background: $main-color;
+            padding: 10px 20px;
+            transition: background-color 0.5s;
+            &:hover {
+              background: $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

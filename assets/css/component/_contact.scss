@@ -1,0 +1,98 @@
+section.contact {
+  padding: 20px;
+  margin-top: 100px;
+  .form {
+    margin: 50px 0;
+    display: flex;   
+    .map {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      padding-bottom: 25%;
+      position: relative;
+      height: 0;
+      iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+    }
+    .contact-form {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding-left: 20px;
+      .top {
+        display: flex;
+        flex-direction: row;
+        input {
+          width: 50%;
+          padding: 6px 12px;
+          border-radius: 0;
+          border: 1px solid #ddd;
+          outline: 0 none;
+          color: $accent-color;
+          margin: 0 10px;
+        }
+      }
+      .bottom {
+        margin: 10px;
+        textarea {
+          display: block;
+          width: 100%;
+          padding: 6px 12px;
+          font-size: 16px;
+          line-height: 1.42857143;
+          color: #444;
+          background-color: $white;
+          background-image: none;
+          border: 1px solid #ddd;
+          border-radius: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          -webkit-transition: none;
+          -o-transition: none;
+          transition: none;
+        }
+      }
+      .button {
+        margin: 10px;
+        a {
+          text-decoration: none;
+          color: #fff;
+          width: 200px;
+          background: #43c1f1;
+          padding: 10px 20px;
+          transition: background-color 0.5s;
+          &:hover {
+            background: $accent-color;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 900px){
+        flex-direction: column-reverse;
+        flex-basis: 100%;
+        .contact-form {
+            padding-left: 0;
+            margin-bottom: 20px;
+            .top {
+                input {
+                    margin: 5px;
+                }
+            }
+            .bottom {
+                margin: 10px 5px;
+            }
+            .button {
+                margin: 10px 5px;
+            }
+        }
+        .map {
+            padding-bottom: 50%;
+        }
+    }
+  }
+}

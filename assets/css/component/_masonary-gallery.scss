@@ -20,7 +20,35 @@ section.portfolio {
     }
     .project {
         width: 33.33333%;
-        padding: 10px;
+        @media screen and (min-width: 900px) { 
+            padding: 10px;
+        }
+        
+        .image {
+            position: relative;            
+            .caption {
+                position: absolute;
+                height: 40px;
+                bottom: 23px;
+                text-align: center;
+                font-size: 0.8em;
+                background: $main-color-shadow;
+                width: 100%;
+                line-height: 0.8em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                color: $white;
+                transition: opacity 0.5s;
+                cursor: pointer;
+            }
+            &:hover {
+                .caption {
+                    opacity: 1;
+                }
+            }
+        }
         img {
             width: 100%;
             object-fit: cover;
