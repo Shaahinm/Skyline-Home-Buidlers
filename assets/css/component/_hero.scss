@@ -1,69 +1,65 @@
 #hero-slider {
-    max-height: 800px;     
-    height: 800px;  
-    margin: 0 20px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
-    @media (max-width: 1199px){
+  max-height: 800px;
+  height: 800px;
+  margin: 0 20px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  @media (max-width: 1199px) {
+    height: 600px;
+  }
+  @media (max-width: 600px) {
+    height: 500px;
+  }
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    @media (min-width: 600px) {
       height: 600px;
-    }  
-    @media (max-width: 600px){
-      height: 500px;
     }
-  }  
-  
-  .hero-img {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      @media (min-width: 600px) {
-        height: 600px;
-      }
-      @media (min-width: 1024px) {
-        height: 800px;
-      }    
-    }
-    .hero-text {
-      text-align: center;
-      position: absolute;
-      text-shadow: 1px 1px $accent-color;
-      top: 50%;
-      left: 40%;    
-      transform: translate(-50%, -50%);
-      color: $white;      
-      padding: 30px;  
-      font-size: 4em; 
-      @media (min-width: 376px) {
-        font-size: 5em; 
-      } 
-      font-weight: bold;
-    //   background-color: rgba(0, 0, 0, .6);
-      width: 80%;
-      @media (min-width: 900px) {
-        top: 40%;
-        left: auto;
-        right: auto;
-        transform: none;
-        width: auto;              
-      }  
-      .top {
-        font-size: 16px;      
-        color: $white;
-        border-bottom: 1px solid $white;
-        padding-bottom: 10px;
-        @media (min-width: 400px) {
-          font-size: 20px;
-        }
-        @media (min-width: 500px) {
-          font-size: 24px;
-        }
-        @media (min-width: 899px) {
-          font-size: 32px;        
-        }  
-      }      
+    @media (min-width: 1024px) {
+      height: 800px;
     }
   }
-  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    text-shadow: 1px 1px $accent-color;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: $white;
+    padding: 30px;
+    font-size: 4em;
+    @media (min-width: 376px) {
+      font-size: 5em;
+    }
+    font-weight: bold;
+    //   background-color: rgba(0, 0, 0, .6);
+    width: 80%;
+    @media (min-width: 900px) {
+      top: 40%;
+      left: auto;
+      right: auto;
+      transform: none;
+      width: auto;
+    }   
+    &.gallery {
+      text-transform: uppercase;
+      font-size: 3em;  
+      left: 50%;    
+      width: 100%;
+      @media (min-width: 376px) {
+        font-size: 3em;                
+      }
+      @media screen and (min-width: 900px){
+        left: auto;
+      }
+    }
+  }
+}

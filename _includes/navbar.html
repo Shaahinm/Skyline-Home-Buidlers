@@ -19,14 +19,24 @@
             </label>
             <nav class="links">
                 <ul>
-                    <li>
+                    {% if page.url == '/' %}
+                    <li class="active">                        
                         <div class="dropdown">
                             <a href="/">
                                 <button class="dropdown-btn" type="button">home</button>
                             </a>
                         </div>
                     </li>
-                    <li class="active">
+                    {% else %}
+                    <li>                        
+                        <div class="dropdown">
+                            <a href="/">
+                                <button class="dropdown-btn" type="button">home</button>
+                            </a>
+                        </div>
+                    </li>
+                    {% endif %}
+                    <li>
                         <div class="dropdown">
                             <button class="dropdown-btn" type="button">previous projects</button>
                         </div>
@@ -35,12 +45,7 @@
                         <div class="dropdown">
                             <button class="dropdown-btn" type="button">contact</button>
                         </div>
-                    </li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="dropdown-btn" type="button">more</button>
-                        </div>
-                    </li>
+                    </li>                    
                 </ul>
             </nav>
         </div>

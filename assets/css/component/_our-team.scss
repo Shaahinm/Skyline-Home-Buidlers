@@ -35,7 +35,8 @@ section.our-team {
         }
       }
       .contact-info {
-        background: rgba(0, 0, 0, 0.5);
+        // background: rgba(0, 0, 0, 0.5);
+        background: $accent-color-shadow;
         position: absolute;
         color: $white;
         display: flex;

@@ -59,16 +59,34 @@ section.contact {
       }
       .button {
         margin: 10px;
-        a {
+        button {
+          outline: 0 none;
           text-decoration: none;
           color: #fff;
           width: 200px;
           background: #43c1f1;
           padding: 10px 20px;
+          box-shadow: none;
+          border: 0;          
           transition: background-color 0.5s;
+          cursor: pointer;
           &:hover {
-            background: $accent-color;
+            background: $accent-color;            
           }
+        }
+      }
+      .texts {
+        color: $accent-color;
+        padding: 20px 10px;
+        a {
+          text-decoration: none;
+          color: $accent-color;
+          &:visited {
+            color: $accent-color;
+          }
+        }
+        h2,h3,h4 {
+          padding: 10px 0;
         }
       }
     }
