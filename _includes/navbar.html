@@ -27,7 +27,7 @@
                             </a>
                         </div>
                     </li>
-                    {% else %}
+                    {% else %}                    
                     <li>                        
                         <div class="dropdown">
                             <a href="/">
@@ -36,16 +36,40 @@
                         </div>
                     </li>
                     {% endif %}
-                    <li>
+                    {% if page.url == '/projects.html' %}
+                    <li class="active">
                         <div class="dropdown">
-                            <button class="dropdown-btn" type="button">previous projects</button>
+                            <a href="/projects.html">
+                                <button class="dropdown-btn" type="button">previous projects</button>
+                            </a>
                         </div>
                     </li>
+                    {% else %}  
                     <li>
                         <div class="dropdown">
-                            <button class="dropdown-btn" type="button">contact</button>
+                            <a href="/projects.html">
+                                <button class="dropdown-btn" type="button">previous projects</button>
+                            </a>
                         </div>
-                    </li>                    
+                    </li>
+                    {% endif %}     
+                    {% if page.url == '/contact.html' %}
+                    <li class="active">
+                        <div class="dropdown">
+                            <a href="/contact.html">
+                                <button class="dropdown-btn" type="button">contact</button>
+                            </a>
+                        </div>
+                    </li>   
+                    {% else %}  
+                    <li>
+                        <div class="dropdown">
+                            <a href="/contact.html">
+                                <button class="dropdown-btn" type="button">contact</button>
+                            </a>
+                        </div>
+                    </li>   
+                    {% endif %}                                                   
                 </ul>
             </nav>
         </div>

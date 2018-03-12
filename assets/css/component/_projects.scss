@@ -1,0 +1,112 @@
+section.done-project {
+  padding: 20px;
+  @media screen and (min-width: 900px) {
+    margin-top: 100px;
+  }
+  .projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 280px;
+    .project {
+      flex-grow: 1;
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      min-height: 200px;
+      box-shadow: 0 0px 8px 1px $accent-color-shadow;
+      border-radius: 8px;
+      margin: 50px;
+      position: relative;
+      @media screen and (max-width: 900px) {
+        flex-basis: 100%;
+        margin: 5px 0;
+      }
+      img {
+        height: 400px;
+        width: 100%;
+        border-radius: 4px;
+        object-fit: cover;
+        @media screen and (max-width: 900px) {
+          height: 500px;
+        }
+      }
+      .title {
+        transition: all 0.5s;
+        position: absolute;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        &:hover {
+          background: $accent-color-shadow;
+        }
+        a {
+          color: white;
+          font-weight: 700;
+        }
+      }
+      &.in-progress {
+        .ribbon {
+          font-size: 16px !important;
+          width: 100%;
+          position: relative;
+          background: $main-color;
+          color: #fff;
+          text-align: center;
+          padding: 1em 2em; /* Adjust to suit */
+        }
+        .ribbon:before,
+        .ribbon:after {
+          content: "";
+          position: absolute;
+          display: block;
+          bottom: -1em;
+          border: 1.5em solid $main-color;
+          z-index: -1;
+        }
+        .ribbon:before {
+          left: -2em;
+          border-right-width: 1.5em;
+          border-left-color: transparent;
+        }
+        .ribbon:after {
+          right: -2em;
+          border-left-width: 1.5em;
+          border-right-color: transparent;
+        }
+        .ribbon .ribbon-content:before,
+        .ribbon .ribbon-content:after {
+          content: "";
+          position: absolute;
+          display: block;
+          border-style: solid;
+          border-color: $main-color transparent transparent transparent;
+          bottom: -1em;
+        }
+        .ribbon .ribbon-content:before {
+          left: 0;
+          border-width: 1em 0 0 1em;
+        }
+        .ribbon .ribbon-content:after {
+          right: 0;
+          border-width: 1em 1em 0 0;
+        }
+        @media screen and (max-width: 768px) {
+            .ribbon:after {
+                display: none;
+            }
+            .ribbon:before {
+                display: none;
+            }
+        }
+      }
+    }
+  }
+}
